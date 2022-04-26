@@ -17,6 +17,7 @@ public static void main(String[] args) {
 ```
 
 > Test annotation, should appear in the area to the right.
+
 > Hei Simon!
 
 <aside class="notice">
