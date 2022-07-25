@@ -1,40 +1,34 @@
 ---
 title: Hello World from HH
+toc_footers:
+  - ©2021 <a href='https://www.datek.no'>Datek Smart Home AS</a>
+  - Powered by <a href='https://github.com/slatedocs/slate'>Slate</a>
+
+includes:
+  - introduction
+  - main-concepts
+  - api-design
+  - authentication
+  - go-live
+  - device
+  - thing
+
+search: true
 ---
 
-# Introduction
+<Go Live Endpoint>
 
-This is the introduction to our API
+<CreateDevice>
 
-# Hello World API
+<CreateThing>
 
-## Hello World
+<DeleteDevice>
 
-```java
-public static void main(String[] args) {
-	System.out.println("Hello World!");
-}
-```
+<LinkThing>
 
-> Test annotation, should appear in the area to the right.
+<ListDevice>
 
-> Hei Simon!
+<UnLinkThing>
 
-<aside class="notice">
-    Used for notifying about something important. 
-</aside>
-
-<aside class="warning">
-    Used for warnings. 
-</aside>
-
-<aside class="success">
-    Used for successfull actions.
-</aside>
-
-<b>Test Table</b>
-
-| Id  | Name  | Age |
-| --- | ----- | --- |
-| 1   | Alice | 30  |
-| 2   | Bob   | 40  |
+<Protected>
+<Query>
