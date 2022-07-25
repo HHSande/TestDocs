@@ -198,7 +198,7 @@
     </style>
     <link href="stylesheets/screen-0a7c4629.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-c427a123.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all_nosearch-c275c2f6.js"></script>
+      <script src="javascripts/all-c5541673.js"></script>
   </head>
 
   <body class="index" data-languages="[]">
@@ -210,68 +210,446 @@
     </a>
     <div class="toc-wrapper">
       <img src="images/logo-1e815a84.png" class="logo" alt="" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#hello-world-api" class="toc-h1 toc-link" data-title="Hello World API">Hello World API</a>
+            <a href="#main-concepts" class="toc-h1 toc-link" data-title="Main Concepts">Main Concepts</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#hello-world" class="toc-h2 toc-link" data-title="Hello World">Hello World</a>
+                    <a href="#devices" class="toc-h2 toc-link" data-title="Devices">Devices</a>
+                  </li>
+                  <li>
+                    <a href="#things" class="toc-h2 toc-link" data-title="Things">Things</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-design" class="toc-h1 toc-link" data-title="API design">API design</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#asynchronous-operations" class="toc-h2 toc-link" data-title="Asynchronous operations">Asynchronous operations</a>
+                  </li>
+                  <li>
+                    <a href="#http-verbs" class="toc-h2 toc-link" data-title="HTTP verbs">HTTP verbs</a>
+                  </li>
+                  <li>
+                    <a href="#http-response-codes" class="toc-h2 toc-link" data-title="HTTP response codes">HTTP response codes</a>
+                  </li>
+                  <li>
+                    <a href="#date-format" class="toc-h2 toc-link" data-title="Date format">Date format</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#go-live" class="toc-h1 toc-link" data-title="Go Live">Go Live</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#request" class="toc-h2 toc-link" data-title="Request">Request</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#device" class="toc-h1 toc-link" data-title="Device">Device</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#requests" class="toc-h2 toc-link" data-title="Requests">Requests</a>
+                  </li>
+                  <li>
+                    <a href="#create-device" class="toc-h2 toc-link" data-title="Create Device">Create Device</a>
+                  </li>
+                  <li>
+                    <a href="#delete-device" class="toc-h2 toc-link" data-title="Delete Device">Delete Device</a>
+                  </li>
+                  <li>
+                    <a href="#list-device" class="toc-h2 toc-link" data-title="List Device">List Device</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#thing" class="toc-h1 toc-link" data-title="Thing">Thing</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#requests" class="toc-h2 toc-link" data-title="Requests">Requests</a>
+                  </li>
+                  <li>
+                    <a href="#create-thing" class="toc-h2 toc-link" data-title="Create Thing">Create Thing</a>
+                  </li>
+                  <li>
+                    <a href="#delete-thing" class="toc-h2 toc-link" data-title="Delete Thing">Delete Thing</a>
                   </li>
               </ul>
           </li>
       </ul>
+        <ul class="toc-footer">
+            <li>©2021 <a href='https://www.datek.no'>Datek Smart Home AS</a></li>
+            <li>Powered by <a href='https://github.com/slatedocs/slate'>Slate</a></li>
+        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>This is the introduction to our API</p>
-<h1 id='hello-world-api'>Hello World API</h1><h2 id='hello-world'>Hello World</h2><div class="highlight"><pre class="highlight java tab-java"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello World!"</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div>
-<blockquote>
-<p>Test annotation, should appear in the area to the right.</p>
+        <p><Go Live Endpoint></p>
 
-<p>Hei Simon!</p>
-</blockquote>
+<p><CreateDevice></p>
 
-<aside class="notice">
-    Used for notifying about something important. 
-</aside>
+<p><CreateThing></p>
 
-<aside class="warning">
-    Used for warnings. 
-</aside>
+<p><DeleteDevice></p>
 
-<aside class="success">
-    Used for successfull actions.
-</aside>
+<p><LinkThing></p>
 
-<p><b>Test Table</b></p>
+<p><ListDevice></p>
 
+<p><UnLinkThing></p>
+
+<p><Protected>
+<Query></p>
+<h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Strømme - High Level API! You can use this API to interact with the Strømme Platform, be it device management, trigger live mode or perform queries against the timeseries database.</p>
+<h1 id='main-concepts'>Main Concepts</h1><h2 id='devices'>Devices</h2>
+<p>A device is a</p>
+<h2 id='things'>Things</h2>
+<p>A thing is a</p>
+<h1 id='api-design'>API design</h1><h2 id='asynchronous-operations'>Asynchronous operations</h2>
+<p>The High Level API is a mix of synchronous and asynchronous operations.
+Synchronous operations are operations that completes / finishes directly. When the client gets a response, processing has finished.
+An example is the operation &quot;Set home name&quot;.</p>
+
+<p>Synchronous operations typically result in an <code>HTTP 200 OK</code>, <code>HTTP 201 Created</code> or <code>HTTP 204 No Content</code> response, depending on the contents of the response.</p>
+
+<p>Asynchronous operations are operations that might take longer to process, so the client should not wait (block) for a result.
+All operations involving the gateway are implemented as asynchronous requests, since the gateway might be offline or on an unstable network.
+For asynchronous operations, the response code is <code>HTTP 202 Accepted</code> and an <code>actionId</code> is returned that the client can use to get results of the operation (filter events in the event stream based on this <code>actionId</code>).</p>
+
+<p>All HTTP operations are validated immediately, so if an asynchronous HTTP operation fails validation, then a HTTP 400 response is returned synchronously with error details.</p>
+
+<p>For requests that pass validation and are sent for forther processing, the default timeout (unless otherwise noted) for all asynchronous operations is 30 seconds, so the client should get either a success event or a timeout event in the event stream within that time frame.</p>
+<h2 id='http-verbs'>HTTP verbs</h2>
 <table><thead>
 <tr>
-<th>Id</th>
-<th>Name</th>
-<th>Age</th>
+<th>Verb</th>
+<th>Usage</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>1</td>
-<td>Alice</td>
-<td>30</td>
+<td>GET</td>
+<td>Used to retrieve a resource</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Bob</td>
-<td>40</td>
+<td>POST</td>
+<td>Used to create a new resource or submit an operation</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Used to update an existing resource, including partial updates</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Used to update an existing resource</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Used to delete an existing resource</td>
+</tr>
+</tbody></table>
+<h2 id='http-response-codes'>HTTP response codes</h2>
+<table><thead>
+<tr>
+<th><nobr>HTTP response code</nobr></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200 OK</td>
+<td>The request completed successfully.</td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td>A new resource has been created successfully. The HTTP response will provide an identifier to the created resource (API operation dependant).</td>
+</tr>
+<tr>
+<td>202 Accepted</td>
+<td>Used for asynchronous operations. The request has been accepted for processing, but the processing has not been completed. The HTTP response will provide an <code>actionId</code> that will be the key to getting the results of the operation (filter events in the event stream based on this <code>actionId</code> to get results of the operation).</td>
+</tr>
+<tr>
+<td>204 No Content</td>
+<td>An update to an existing resource has been applied successfully.</td>
+</tr>
+<tr>
+<td>400 Bad Request</td>
+<td>The request was malformed or had content that did not pass validation. The response body will include an error providing further information.</td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>Missing or invalid user HTTP Authentication credentials, or the user&#39;s email address has not been validated.</td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>Valid user HTTP Authentication credentials, but user did not have access to resource (including not sufficient privileges to perform the operation on the resource in question).</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>The requested resource did not exist</td>
+</tr>
+<tr>
+<td>409 Conflict</td>
+<td>Another resource with conflicting parameters exists (i.e. uniqueness constraint violated).</td>
+</tr>
+</tbody></table>
+<h2 id='date-format'>Date format</h2>
+<p>All dates accepted and returned by the API are in <b>ISO 8601</b> format (example &quot;2020-06-24T12:53:28.000+0000&quot;).</p>
+
+<p>Clients should use a ISO 8601 compatible date library and not use a fixed date time pattern when parsing dates returned from the API, so that different variants / precisions of ISO 8601 dates are supported.</p>
+<h1 id='authentication'>Authentication</h1><h1 id='go-live'>Go Live</h1>
+<p>Whenever a user enters the app that is integrated with the Strømme platform, a &quot;live mode request&quot; is sent.
+The motivation behind this, is keeping cost down. Rather than continuously sending live data, we want to buffer it and then send it. This reduces the overall cost, seeing as you&#39;re charged for a certain message size, and this size is also the size of the buffer. For example, if we send live data, which is 2 KB in size, and this gets rounded up to 10 KB, then it will be cheaper to buffer 5 live data messages (5 x 2 KB = 10 KB) and then send it.</p>
+
+<p>This means that whenever a user enters their app, only then do they really need to see their data in real-time, and thus the &quot;live mode request&quot; is fired, and data flows into the app real-time.</p>
+<h2 id='request'>Request</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+<th>Query Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/goLive</td>
+<td>deviceId</td>
+</tr>
+</tbody></table>
+<h1 id='device'>Device</h1>
+<p>A device represents the physical device sending data to our platform, for instance a HAN-device.</p>
+<h2 id='requests'>Requests</h2>
+<p>The API offers several endpoints you can use to manage your device.</p>
+<h2 id='create-device'>Create Device</h2>
+<p>Creates an entry in the database with the given device ID.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>/createDevice</td>
+</tr>
+</tbody></table>
+<h3 id='payload-parameters'>Payload Parameters</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>deviceId</td>
+<td>String</td>
+<td>ID of the device to be created</td>
+<td>Required</td>
 </tr>
 </tbody></table>
 
+<blockquote>
+<p>Body Structure</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='delete-device'>Delete Device</h2>
+<p>Deletes the entry from the database with the given device ID.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DELETE</td>
+<td>/createDevice</td>
+</tr>
+</tbody></table>
+<h3 id='payload-parameters-2'>Payload Parameters</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>deviceId</td>
+<td>String</td>
+<td>ID of the device to be deleted</td>
+<td>Required</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Body Structure</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='list-device'>List Device</h2>
+<p>Lists all devices related to a given partner.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+<th>Query Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/listDevice</td>
+<td>partnerId</td>
+</tr>
+</tbody></table>
+<h3 id='payload-paramters'>Payload Paramters</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>partnerId</td>
+<td>String</td>
+<td>ID of the partner to list the devices for</td>
+<td>Required</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Response Structure</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"partnerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Partner1337"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test321"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"partnerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Partner1337"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='thing'>Thing</h1>
+<p>A thing represents the device as an IoT device in the cloud. This is used for communication between the devices and the cloud.</p>
+<h2 id='requests'>Requests</h2>
+<p>The API offers several endpoints you can use to manage your things.</p>
+<h2 id='create-thing'>Create Thing</h2>
+<p>Creates a thing in AWS IoT Core, along with a certificate containing permissions regarding the actions the given thing is allowed to perform.
+This also links the given device with the thing you create.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>/createThing</td>
+</tr>
+</tbody></table>
+<h3 id='payload-parameters'>Payload parameters</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>deviceId</td>
+<td>String</td>
+<td>The id of the device to be associated with the thing</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>thingName</td>
+<td>String</td>
+<td>The user defined thing name</td>
+<td>Required</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Body Structure</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"thingName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestName"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response Structure</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"certPem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"something"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"keyPair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"keypair"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"thingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thingId"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='delete-thing'>Delete Thing</h2>
+<p>Deletes the thing in AWS IoT Core, also deleting the certificate and removes the association between the thing and the device.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DELETE</td>
+<td>/deleteThing</td>
+</tr>
+</tbody></table>
+<h3 id='payload-parameters-2'>Payload Parameters</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>thingName</td>
+<td>String</td>
+<td>The user defined thing name</td>
+<td>Required</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Body Structure</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"thingName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestName"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
       </div>
       <div class="dark-box">
       </div>
