@@ -12,6 +12,7 @@ includes:
   - go-live
   - device
   - thing
+  - jwt_authorizer
 
 search: true
 ---
