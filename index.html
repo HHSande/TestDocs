@@ -288,6 +288,9 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#jwt-authorizer" class="toc-h1 toc-link" data-title="JWT Authorizer">JWT Authorizer</a>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li>©2021 <a href='https://www.datek.no'>Datek Smart Home AS</a></li>
@@ -328,11 +331,11 @@ An example is the operation &quot;Set home name&quot;.</p>
 
 <p>Asynchronous operations are operations that might take longer to process, so the client should not wait (block) for a result.
 All operations involving the gateway are implemented as asynchronous requests, since the gateway might be offline or on an unstable network.
-For asynchronous operations, the response code is <code>HTTP 202 Accepted</code> and an <code>actionId</code> is returned that the client can use to get results of the operation (filter events in the event stream based on this <code>actionId</code>).</p>
+For asynchronous operations, the response code is <code>HTTP 202 Accepted</code>.</p>
 
 <p>All HTTP operations are validated immediately, so if an asynchronous HTTP operation fails validation, then a HTTP 400 response is returned synchronously with error details.</p>
 
-<p>For requests that pass validation and are sent for forther processing, the default timeout (unless otherwise noted) for all asynchronous operations is 30 seconds, so the client should get either a success event or a timeout event in the event stream within that time frame.</p>
+<p>For requests that pass validation and are sent for further processing, the default timeout (unless otherwise noted) for all asynchronous operations is 30 seconds, so the client should get either a success event or a timeout event in the event stream within that time frame.</p>
 <h2 id='http-verbs'>HTTP verbs</h2>
 <table><thead>
 <tr>
@@ -378,7 +381,7 @@ For asynchronous operations, the response code is <code>HTTP 202 Accepted</code>
 </tr>
 <tr>
 <td>202 Accepted</td>
-<td>Used for asynchronous operations. The request has been accepted for processing, but the processing has not been completed. The HTTP response will provide an <code>actionId</code> that will be the key to getting the results of the operation (filter events in the event stream based on this <code>actionId</code> to get results of the operation).</td>
+<td>Used for asynchronous operations. The request has been accepted for processing, but the processing has not been completed.</td>
 </tr>
 <tr>
 <td>204 No Content</td>
@@ -406,9 +409,7 @@ For asynchronous operations, the response code is <code>HTTP 202 Accepted</code>
 </tr>
 </tbody></table>
 <h2 id='date-format'>Date format</h2>
-<p>All dates accepted and returned by the API are in <b>ISO 8601</b> format (example &quot;2020-06-24T12:53:28.000+0000&quot;).</p>
-
-<p>Clients should use a ISO 8601 compatible date library and not use a fixed date time pattern when parsing dates returned from the API, so that different variants / precisions of ISO 8601 dates are supported.</p>
+<p>All dates accepted and returned by the API are in <b>ISO 8601</b> format (example &quot;2020-06-24T12:53:28.000+0000&quot;). (???)</p>
 <h1 id='authentication'>Authentication</h1><h1 id='go-live'>Go Live</h1>
 <p>Whenever a user enters the app that is integrated with the Strømme platform, a &quot;live mode request&quot; is sent.
 The motivation behind this, is keeping cost down. Rather than continuously sending live data, we want to buffer it and then send it. This reduces the overall cost, seeing as you&#39;re charged for a certain message size, and this size is also the size of the buffer. For example, if we send live data, which is 2 KB in size, and this gets rounded up to 10 KB, then it will be cheaper to buffer 5 live data messages (5 x 2 KB = 10 KB) and then send it.</p>
@@ -649,7 +650,7 @@ This also links the given device with the thing you create.</p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"thingName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestName"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre></div><h1 id='jwt-authorizer'>JWT Authorizer</h1>
       </div>
       <div class="dark-box">
       </div>
