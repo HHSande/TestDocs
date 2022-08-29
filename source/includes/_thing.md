@@ -11,25 +11,16 @@ The API offers several endpoints you can use to manage your things.
 Creates a thing in AWS IoT Core, along with a certificate containing permissions regarding the actions the given thing is allowed to perform.
 This also links the given device with the thing you create.
 
-| Method | Resource     |
-| ------ | ------------ |
-| POST   | /createThing |
+| Method | Resource     | Query Params        |
+| ------ | ------------ | ------------------- |
+| POST   | /createThing | deviceId, thingName |
 
-### Payload parameters
+### Query parameters
 
-| Field     | Type   | Description                                          | Constraints |
-| --------- | ------ | ---------------------------------------------------- | ----------- |
-| deviceId  | String | The id of the device to be associated with the thing | Required    |
-| thingName | String | The user defined thing name                          | Required    |
-
-> Body Structure
-
-```json
-{
-  "deviceId": "Test123",
-  "thingName": "TestName"
-}
-```
+| Param name | Type   | Description                                          | Constraints |
+| ---------- | ------ | ---------------------------------------------------- | ----------- |
+| deviceId   | String | The id of the device to be associated with the thing | Required    |
+| thingName  | String | The user defined thing name                          | Required    |
 
 > Response Structure
 
@@ -45,20 +36,13 @@ This also links the given device with the thing you create.
 
 Deletes the thing in AWS IoT Core, also deleting the certificate and removes the association between the thing and the device.
 
-| Method | Resource     |
-| ------ | ------------ |
-| DELETE | /deleteThing |
+| Method | Resource     | Query Params        |
+| ------ | ------------ | ------------------- |
+| POST   | /deleteThing | deviceId, thingName |
 
-### Payload Parameters
+### Query Parameters
 
-| Field     | Type   | Description                 | Constraints |
-| --------- | ------ | --------------------------- | ----------- |
-| thingName | String | The user defined thing name | Required    |
-
-> Body Structure
-
-```json
-{
-  "thingName": "TestName"
-}
-```
+| Query Name | Type   | Description                                          | Constraints |
+| ---------- | ------ | ---------------------------------------------------- | ----------- |
+| deviceId   | String | The id of the device to be associated with the thing | Required    |
+| thingName  | String | The user defined thing name                          | Required    |

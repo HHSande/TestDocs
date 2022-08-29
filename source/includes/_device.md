@@ -10,45 +10,29 @@ The API offers several endpoints you can use to manage your device.
 
 Creates an entry in the database with the given device ID.
 
-| Method | Resource      |
-| ------ | ------------- |
-| POST   | /createDevice |
+| Method | Resource      | Query Params |
+| ------ | ------------- | ------------ |
+| POST   | /createDevice | deviceId     |
 
-### Payload Parameters
+### Query Parameters
 
-| Field    | Type   | Description                    | Constraints |
-| -------- | ------ | ------------------------------ | ----------- |
-| deviceId | String | ID of the device to be created | Required    |
-
-> Body Structure
-
-```json
-{
-  "deviceId": "Test123"
-}
-```
+| Param name | Type   | Description                    | Constraints |
+| ---------- | ------ | ------------------------------ | ----------- |
+| deviceId   | String | ID of the device to be created | Required    |
 
 ## Delete Device
 
 Deletes the entry from the database with the given device ID.
 
-| Method | Resource      |
-| ------ | ------------- |
-| DELETE | /createDevice |
+| Method | Resource      | Query Params |
+| ------ | ------------- | ------------ |
+| DELETE | /deleteDevice | deviceId     |
 
 ### Payload Parameters
 
-| Field    | Type   | Description                    | Constraints |
-| -------- | ------ | ------------------------------ | ----------- |
-| deviceId | String | ID of the device to be deleted | Required    |
-
-> Body Structure
-
-```json
-{
-  "deviceId": "Test123"
-}
-```
+| Param Name | Type   | Description                    | Constraints |
+| ---------- | ------ | ------------------------------ | ----------- |
+| deviceId   | String | ID of the device to be deleted | Required    |
 
 ## List Device
 
@@ -60,9 +44,9 @@ Lists all devices related to a given partner.
 
 ### Payload Paramters
 
-| Field     | Type   | Description                               | Constraints |
-| --------- | ------ | ----------------------------------------- | ----------- |
-| partnerId | String | ID of the partner to list the devices for | Required    |
+| Param Name | Type   | Description                               | Constraints |
+| ---------- | ------ | ----------------------------------------- | ----------- |
+| partnerId  | String | ID of the partner to list the devices for | Required    |
 
 > Response Structure
 
