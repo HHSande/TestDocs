@@ -291,6 +291,17 @@
           <li>
             <a href="#jwt-authorizer" class="toc-h1 toc-link" data-title="JWT Authorizer">JWT Authorizer</a>
           </li>
+          <li>
+            <a href="#token" class="toc-h1 toc-link" data-title="Token">Token</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#request" class="toc-h2 toc-link" data-title="Request">Request</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#header-auth" class="toc-h1 toc-link" data-title="Header (auth)">Header (auth)</a>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li>©2021 <a href='https://www.datek.no'>Datek Smart Home AS</a></li>
@@ -440,17 +451,19 @@ The motivation behind this, is keeping cost down. Rather than continuously sendi
 <tr>
 <th>Method</th>
 <th>Resource</th>
+<th>Query Params</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>POST</td>
 <td>/createDevice</td>
+<td>deviceId</td>
 </tr>
 </tbody></table>
-<h3 id='payload-parameters'>Payload Parameters</h3>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Field</th>
+<th>Param name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Constraints</th>
@@ -463,31 +476,26 @@ The motivation behind this, is keeping cost down. Rather than continuously sendi
 <td>Required</td>
 </tr>
 </tbody></table>
-
-<blockquote>
-<p>Body Structure</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='delete-device'>Delete Device</h2>
+<h2 id='delete-device'>Delete Device</h2>
 <p>Deletes the entry from the database with the given device ID.</p>
 
 <table><thead>
 <tr>
 <th>Method</th>
 <th>Resource</th>
+<th>Query Params</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>DELETE</td>
-<td>/createDevice</td>
+<td>/deleteDevice</td>
+<td>deviceId</td>
 </tr>
 </tbody></table>
-<h3 id='payload-parameters-2'>Payload Parameters</h3>
+<h3 id='payload-parameters'>Payload Parameters</h3>
 <table><thead>
 <tr>
-<th>Field</th>
+<th>Param Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Constraints</th>
@@ -500,14 +508,7 @@ The motivation behind this, is keeping cost down. Rather than continuously sendi
 <td>Required</td>
 </tr>
 </tbody></table>
-
-<blockquote>
-<p>Body Structure</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='list-device'>List Device</h2>
+<h2 id='list-device'>List Device</h2>
 <p>Lists all devices related to a given partner.</p>
 
 <table><thead>
@@ -526,7 +527,7 @@ The motivation behind this, is keeping cost down. Rather than continuously sendi
 <h3 id='payload-paramters'>Payload Paramters</h3>
 <table><thead>
 <tr>
-<th>Field</th>
+<th>Param Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Constraints</th>
@@ -567,17 +568,19 @@ This also links the given device with the thing you create.</p>
 <tr>
 <th>Method</th>
 <th>Resource</th>
+<th>Query Params</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>POST</td>
 <td>/createThing</td>
+<td>deviceId, thingName</td>
 </tr>
 </tbody></table>
-<h3 id='payload-parameters'>Payload parameters</h3>
+<h3 id='query-parameters'>Query parameters</h3>
 <table><thead>
 <tr>
-<th>Field</th>
+<th>Param name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Constraints</th>
@@ -598,14 +601,6 @@ This also links the given device with the thing you create.</p>
 </tbody></table>
 
 <blockquote>
-<p>Body Structure</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"deviceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test123"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"thingName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestName"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<blockquote>
 <p>Response Structure</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -620,22 +615,30 @@ This also links the given device with the thing you create.</p>
 <tr>
 <th>Method</th>
 <th>Resource</th>
+<th>Query Params</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>DELETE</td>
+<td>POST</td>
 <td>/deleteThing</td>
+<td>deviceId, thingName</td>
 </tr>
 </tbody></table>
-<h3 id='payload-parameters-2'>Payload Parameters</h3>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Field</th>
+<th>Query Name</th>
 <th>Type</th>
 <th>Description</th>
 <th>Constraints</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>deviceId</td>
+<td>String</td>
+<td>The id of the device to be associated with the thing</td>
+<td>Required</td>
+</tr>
 <tr>
 <td>thingName</td>
 <td>String</td>
@@ -643,14 +646,39 @@ This also links the given device with the thing you create.</p>
 <td>Required</td>
 </tr>
 </tbody></table>
+<h1 id='jwt-authorizer'>JWT Authorizer</h1>
+<p>Every API request is handled by a Lambda which ensures that the given user is authorized to make the given request.
+The user first has to add a token in the request header, this is done by calling (someUrl) where you pass your ClientId and ClientSecret to produce a token.<br>
+This will then be validated by the lambda, verifying that the user has the correct permission to perform the given request against the given resource.</p>
+<h1 id='token'>Token</h1><h2 id='request'>Request</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Resource</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>post</td>
+<td>/token</td>
+</tr>
+</tbody></table>
+<h3 id='auth'>Auth</h3>
+<p>Basic Auth
+Username: &lt; ClientId &gt;
+Password: &lt; ClientSecret &gt;</p>
+<h1 id='header-auth'>Header (auth)</h1>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>&lt; token from token request &gt;</td>
+</tr>
+</tbody></table>
 
-<blockquote>
-<p>Body Structure</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"thingName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TestName"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div><h1 id='jwt-authorizer'>JWT Authorizer</h1>
       </div>
       <div class="dark-box">
       </div>
